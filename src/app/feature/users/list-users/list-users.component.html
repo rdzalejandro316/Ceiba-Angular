@@ -1,0 +1,41 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = user-list__filter, user-list__table, user-list__table-item-[index], user-list__table-item-[index]-avatar, user-list__table-item-[index]-first_name, user-list__table-item-[index]-email, user-list__table-item-[index]-btn-delete
+  Remplazar [index] por el valor ejemplo "user-list__table-item-0"
+-->
+
+<div class="listUser">
+  <div class="card ma-10 pt-20 pb-20">
+    <div class="ml-10">
+      <label>Search : </label>
+      <input type="text" id="user-list__filter" [(ngModel)]="searchName">
+    </div>
+  </div>
+
+  <div class="card ma-10">
+    <table id="user-list__table">
+      <thead>
+        <tr>
+          <th>EMAIL</th>
+          <th>NAME</th>
+          <th>IMAGE</th>
+          <th>DELETE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of users | filterUserByName : 'first_name' :searchName; let i = index" id="user-list__table-item-{{i}}">
+          <td id="user-list__table-item-{{i}}-email">{{user.email}}</td>
+          <td id="user-list__table-item-{{i}}-first_name">{{user.first_name}}</td>
+          <td>
+            <img id="user-list__table-item-{{i}}-avatar" src="{{user.avatar}}" class="imgAvatar">
+          </td>
+          <td>
+            <button id="user-list__table-item-{{i}}-btn-delete" class="danger" (click)="deleteUser(user)">
+              delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

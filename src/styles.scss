@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+@import "node_modules/h8k-design/lib/index.scss";
+
+:root {
+    --color-ceiba: #10d25f;
+}
+
+.w-100
+{
+    width: 100% !important;
+}
+
+.h-100
+{
+    width: 100% !important;
+}
+
+.justify-content
+{
+    justify-content: center;
+}
+
+.flex-direction-column
+{
+    flex-direction: column;
+}
+
+.text-align-center
+{
+    text-align: center;
+}
+
+.text-align-left
+{
+    text-align: left;
+}

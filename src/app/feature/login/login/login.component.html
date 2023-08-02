@@ -1,0 +1,37 @@
+<!--
+  Recuerde conservar los id, no deben ser modificados
+  ids = login__email, login__password, login__password-error, login__email-error, login__btn-login
+-->
+
+<form [formGroup]="loginForm" class="formLogin">
+  <div class="row card loginForm py-20">
+
+    <div class="flex justify-content">
+      <img src="../../../../assets/images/ceiba.png" />
+    </div>
+
+    <div class="loginData">
+
+      <div class="pa-10">
+        <p class="ma-0 text-align-left titleData">Email</p>
+        <input type="text" id="login__email" class="w-100" placeholder="enter your email" formControlName="email">
+
+        <p class="form-hint error" *ngIf="emailValidate" id="login__email-error">Email is required</p>
+      </div>
+
+      <div class="pa-10">
+        <p class="ma-0 text-align-left titleData">Password</p>
+        <input type="text" id="login__password" class="w-100" placeholder="enter your password"
+          formControlName="password">
+        <p class="form-hint error" *ngIf="passwordValidate" id="login__password-error">Password is required</p>
+        <p class="form-hint error" *ngIf="passwordMin" id="login__password-error">The minimum of characters will be 8
+        </p>
+      </div>
+
+      <div class="pt-10">
+        <button id="login__btn-login" class="w-100" (click)="login()">LOGIN</button>
+      </div>
+    </div>
+
+  </div>
+</form>

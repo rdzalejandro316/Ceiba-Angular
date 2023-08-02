@@ -1,0 +1,38 @@
+.nabvar
+{
+    background-color: black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  li {
+    float: left;
+    padding: 0;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #10d25f45;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+
+  .logout{
+    float:right;
+  }

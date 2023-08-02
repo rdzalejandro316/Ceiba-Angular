@@ -1,0 +1,27 @@
+.formLogin {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    align-items: center;
+}
+
+.loginForm {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.loginData {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.titleData {
+    color: var(--color-ceiba);
+    font-weight: bold;
+}
+
+.error
+{
+    color: red;
+}
